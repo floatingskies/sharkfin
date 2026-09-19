@@ -4,21 +4,22 @@
 #
 #  ./download-iso.sh [IMAGE_NAME] [IMAGE_TAG]
 #
-#   IMAGE_NAME is one of sharkfin (default), sharkfin-bluefin, sharkfin-bazzite
-#   TAG_NAME is the image tag (default is gts)
+#   IMAGE_NAME is one of sharkfin-bluefin (default), or sharkfin-bluefin if you
+#              insist on being explicit
+#   TAG_NAME is the image tag (default is stable)
 #
 
 if [ -z $(command -v podman) ]; then
     echo "Podman is required"
     exit 1
 fi
-IMAGE_NAME=${1-sharkfin}
-IMAGE_TAG=${2-gts}
+IMAGE_NAME=${1-sharkfin-bluefin}
+IMAGE_TAG=${2-stable}
 echo "Creating an ISO for the $IMAGE_NAME:$IMAGE_TAG image"
 rm -rf ./output
 mkdir ./output
 if ! sudo podman run --rm --privileged --volume ./output:/build-container-installer/build --pull=always \
- ghcr.io/jasonn3/build-container-installer:latest IMAGE_REPO=ghcr.io/arikcloss \
+ ghcr.io/jasonn3/build-container-installer:latest IMAGE_REPO=ghcr.io/floatingskies \
  IMAGE_NAME=$IMAGE_NAME \
  IMAGE_TAG=$IMAGE_TAG \
  VARIANT=Silverblue ; then

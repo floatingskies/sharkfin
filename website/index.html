@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>sharkfin — a Fedora Atomic desktop that feels like home</title>
-  <meta name="description" content="Sharkfin is a personal Fedora Atomic desktop: Silverblue, Bluefin, and Bazzite images rebuilt daily, with curated wallpapers, fonts, tooling, and live installer ISOs you can download and flash.">
+  <meta name="description" content="Sharkfin is a personal Fedora Atomic desktop: a Bluefin DX image rebuilt daily, with curated wallpapers, fonts, tooling, and live installer ISOs you can download and flash.">
   <meta name="color-scheme" content="dark light">
   <meta name="theme-color" content="#1c1712">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M22.7 5.1C13.8 6.9 7.8 14.3 6.9 22.4c-.2 1.9 1.5 3.4 3.4 3.1 6.4-1 13-5.8 15.6-13.5.9-2.6.1-5.4-3.2-6.9z' fill='%23ff8a5c'/%3E%3Cpath d='M19.4 18.4c4.5-9.1 8.9-11.4 8.9-11.4s3.6 6.9.7 12.6c-2.2 4.4-7.4 6.6-12 3.6.8-1.6 1.6-3.2 2.4-4.8z' fill='%23f7b33b' opacity='.75'/%3E%3C/svg%3E">
@@ -42,16 +42,14 @@
       <div class="hero-rule reveal" aria-hidden="true"></div>
       <p class="hero-sub reveal">
         A Fedora Atomic desktop that feels like home. My daily driver, layered on
-        <a href="https://silverblue.fedoraproject.org/" target="_blank" rel="noopener noreferrer">Silverblue</a>,
-        <a href="https://projectbluefin.io" target="_blank" rel="noopener noreferrer">Bluefin</a>, or
-        <a href="https://bazzite.gg" target="_blank" rel="noopener noreferrer">Bazzite</a> —
-        with wallpapers, fonts, tooling, and a live installer baked in.
+        <a href="https://projectbluefin.io" target="_blank" rel="noopener noreferrer">Bluefin DX</a> —
+        with the funny shark wallpaper, fonts, tooling, and a live installer baked in.
       </p>
       <div class="hero-actions reveal">
         <a class="btn btn-primary" href="#download">Download the ISO</a>
         <a class="btn-text" href="https://github.com/floatingskies/sharkfin" target="_blank" rel="noopener noreferrer">view the repo ↗</a>
       </div>
-      <p class="hero-meta reveal">Silverblue · Bluefin · Bazzite — one familiar GNOME</p>
+      <p class="hero-meta reveal">Bluefin DX — one familiar GNOME</p>
     </section>
 
     <!-- WHY -->
@@ -65,10 +63,10 @@
         </p>
         <ul class="feature-list reveal">
           <li><strong>Atomic &amp; signed</strong> — immutable images with clean rollbacks, verified with cosign.</li>
-          <li><strong>One GNOME, everywhere</strong> — the same curated desktop on Silverblue, Bluefin, and Bazzite.</li>
-          <li><strong>Wallpapers that wander</strong> — System76, Framework, Ubuntu, and KDE/Plasma collections, all in the picker.</li>
-          <li><strong>Little comforts</strong> — Chrome as the browser, Intel One Mono, Docker rootless, VM tooling.</li>
-          <li><strong>Flatpaks curated</strong> — a chosen set of sandboxed apps installs automatically at first boot.</li>
+          <li><strong>One GNOME, everywhere</strong> — the same curated desktop, on every channel.</li>
+          <li><strong>Wallpapers that wander</strong> — System76, Framework, Ubuntu, and KDE/Plasma collections, all in the picker — plus the funny shark by default.</li>
+          <li><strong>Little comforts</strong> — Chrome as the browser, Intel One Mono, Ctrl+Alt+T terminal.</li>
+          <li><strong>Flatpaks curated</strong> — a chosen set of sandboxed apps installs automatically at first boot, with nothing duplicated.</li>
           <li><strong>A real installer</strong> — boot the ISO to try it, or install it to disk; Secure Boot works.</li>
         </ul>
       </div>
@@ -77,23 +75,13 @@
     <!-- EDITIONS -->
     <section class="band band-sun" id="editions">
       <div class="wrap">
-        <p class="eyebrow reveal">editions</p>
-        <h2 class="section-title reveal">Pick your flavour.</h2>
+        <p class="eyebrow reveal">edition</p>
+        <h2 class="section-title reveal">One flavour, three channels.</h2>
         <div class="editions">
-          <article class="edition reveal">
-            <h3 class="edition-name">Sharkfin <span class="muted">— Silverblue</span></h3>
-            <p>Fedora Silverblue base. Visual Studio Code, libvirt/Virt-Manager, GNOME conveniences like Dash-to-Dock and a proper terminal shortcut.</p>
-            <p class="taglist"><span class="tag">gts · Fedora 43 · weekly</span><span class="tag">latest · Fedora 44 · daily</span></p>
-          </article>
           <article class="edition edition-highlight reveal">
             <h3 class="edition-name">Sharkfin <span class="muted">— Bluefin DX</span></h3>
-            <p>Based on Bluefin's developer image, dev tools included. Starship turned off by default, rootless Docker, a thoughtful Flatpak set. My daily driver.</p>
+            <p>Based on Bluefin's developer image, dev tools included. Starship turned off by default, rootless Docker, the funny shark wallpaper, a thoughtful Flatpak set. My daily driver.</p>
             <p class="taglist"><span class="tag">gts · weekly</span><span class="tag">stable · weekly</span><span class="tag">latest · daily</span></p>
-          </article>
-          <article class="edition reveal">
-            <h3 class="edition-name">Sharkfin <span class="muted">— Bazzite DX</span></h3>
-            <p>Built on Bazzite DX GNOME stable: the same polished shell with developer mode enabled, and Steam no longer autostarts on login.</p>
-            <p class="taglist"><span class="tag">stable · weekly</span></p>
           </article>
         </div>
       </div>
@@ -162,7 +150,7 @@
             <p>Launch <strong>Install to Disk</strong> from the live desktop (Anaconda). Secure Boot is supported — enroll the
               <a href="https://docs.ublue.io/" target="_blank" rel="noopener noreferrer">Universal Blue</a> key or keep your own. Already on an Atomic system?</p>
             <pre class="code">sudo bootc switch \
-  ghcr.io/floatingskies/sharkfin:latest</pre>
+  ghcr.io/floatingskies/sharkfin-bluefin:latest</pre>
             <p class="hint">Then <code>systemctl reboot</code>. Roll back anytime from the boot menu.</p>
           </article>
         </div>

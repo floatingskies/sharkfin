@@ -1,0 +1,8 @@
+# Make the funny shark the default background on every Sharkfin Bluefin image.
+# zz999 sorts after Bluefin's own zz0 override (and our zz1/zz42 files), so it
+# wins when the schemas are compiled. Users can still change it from Settings.
+
+[org.gnome.desktop.background]
+picture-uri='file:///usr/share/backgrounds/funny%20shark%20wallpaper/funny%20shark.jpeg'
+picture-uri-dark='file:///usr/share/backgrounds/funny%20shark%20wallpaper/funny%20shark.jpeg'
+picture-options='zoom'

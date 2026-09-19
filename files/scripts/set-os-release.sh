@@ -10,7 +10,6 @@ set -euo pipefail
 # keeps working through base-image and Fedora version bumps with no edits:
 #
 #   base ID is bluefin  -> "Sharkfin Bluefin"
-#   base ID is bazzite  -> "Sharkfin Bazzite"
 #   anything else       -> "Sharkfin"
 #
 # Fields that describe the underlying OS (VERSION_ID, VERSION_CODENAME,
@@ -46,11 +45,6 @@ case "$BASE_ID" in
         IMAGE_ID="${IMAGE_ID:-sharkfin-bluefin}"
         IMAGE_HOSTNAME="${IMAGE_HOSTNAME:-sharkfin-bluefin}"
         ;;
-    bazzite*)
-        IMAGE_NAME="${IMAGE_NAME:-Sharkfin Bazzite}"
-        IMAGE_ID="${IMAGE_ID:-sharkfin-bazzite}"
-        IMAGE_HOSTNAME="${IMAGE_HOSTNAME:-sharkfin-bazzite}"
-        ;;
     *)
         IMAGE_NAME="${IMAGE_NAME:-Sharkfin}"
         IMAGE_ID="${IMAGE_ID:-sharkfin}"
@@ -59,10 +53,10 @@ case "$BASE_ID" in
 esac
 
 RELEASE_TYPE="${RELEASE_TYPE:-stable}"
-IMAGE_HOME_URL="${IMAGE_HOME_URL:-https://github.com/arikcloss/sharkfin}"
-IMAGE_DOCUMENTATION_URL="${IMAGE_DOCUMENTATION_URL:-https://github.com/arikcloss/sharkfin#readme}"
-IMAGE_SUPPORT_URL="${IMAGE_SUPPORT_URL:-https://github.com/arikcloss/sharkfin/issues}"
-IMAGE_BUG_REPORT_URL="${IMAGE_BUG_REPORT_URL:-https://github.com/arikcloss/sharkfin/issues}"
+IMAGE_HOME_URL="${IMAGE_HOME_URL:-https://github.com/floatingskies/sharkfin}"
+IMAGE_DOCUMENTATION_URL="${IMAGE_DOCUMENTATION_URL:-https://github.com/floatingskies/sharkfin#readme}"
+IMAGE_SUPPORT_URL="${IMAGE_SUPPORT_URL:-https://github.com/floatingskies/sharkfin/issues}"
+IMAGE_BUG_REPORT_URL="${IMAGE_BUG_REPORT_URL:-https://github.com/floatingskies/sharkfin/issues}"
 
 # Bluefin-style build stamp: <channel>-<v>.YYYYMMDD.1
 VERSION="$RELEASE_TYPE-$BASE_VERSION_ID.$(date -u +%Y%m%d).1"

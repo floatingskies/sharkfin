@@ -1,10 +1,15 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 
-# Note: The can only be one list of flatpaks becuase
-# you can really only run this module once per build.  An appparent fix for this
+# Note: There can only be one list of flatpaks, because this module can really
+# only be run once per build. An apparent fix for this
 # (see https://github.com/blue-build/modules/pull/263) doesn't do what we need --
 # the fix only makes sure the effects of the 1st module run are not overwritten
 # (any subsequent runs are ignored).
+#
+# These are installed at runtime on first boot (not baked into the image), and
+# deliberately exclude apps the Bluefin base image already ships so nothing
+# shows up twice in the app grid: Mission Center, Extension Manager, Bazaar,
+# Warehouse and DistroShelf.
 
 modules:
   - type: default-flatpaks
@@ -17,7 +22,6 @@ modules:
         - org.gtk.Gtk3theme.adw-gtk3
         - org.gtk.Gtk3theme.adw-gtk3-dark
         - org.gnome.Firmware
-        - io.missioncenter.MissionCenter
         - org.cockpit_project.CockpitClient
         - org.gnome.Logs
         - org.gnome.Calculator
@@ -26,7 +30,6 @@ modules:
         - org.gnome.FileRoller        
         - ca.desrt.dconf-editor
         - com.github.tchx84.Flatseal
-        - com.mattjakeman.ExtensionManager
         - org.gnome.Weather
         - org.gnome.Papers
         - org.gnome.Loupe
@@ -35,8 +38,6 @@ modules:
         - org.gnome.Snapshot 
         - org.libreoffice.LibreOffice        
         - org.fedoraproject.MediaWriter
-        - io.github.flattool.Warehouse
-        - io.github.kolunmi.Bazaar
         - org.gnome.SimpleScan
         - org.gustavoperedo.FontDownloader
         - org.gnome.NautilusPreviewer
@@ -56,7 +57,6 @@ modules:
 
         # Developer Tools
         - io.dbeaver.DBeaverCommunity
-        - com.ranfdev.DistroShelf
         - sh.loft.devpod
         - me.iepure.devtoolbox
         - io.podman_desktop.PodmanDesktop

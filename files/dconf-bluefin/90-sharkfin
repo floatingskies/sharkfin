@@ -39,3 +39,16 @@ sort-directories-first=true
 
 [org/gnome/desktop/peripherals/touchpad]
 tap-to-click=true
+
+# Keep virtual desktops on the primary monitor only (multi-monitor friendly)
+[org/gnome/mutter]
+workspaces-only-on-primary=true
+
+# <CTRL><ALT>t opens a terminal (like the classic Ubuntu shortcut)
+[org/gnome/settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Control><Alt>t'
+command='/usr/bin/ptyxis --new-window'
+name='Open Terminal'

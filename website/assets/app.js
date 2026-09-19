@@ -86,7 +86,7 @@
   function editionInfo(name) {
     var parts = name.split("-");
     var key = parts[1] || "";
-    var map = { bluefin: "Bluefin", bazzite: "Bazzite", sharkfin: "Silverblue" };
+    var map = { bluefin: "Bluefin" };
     return { edition: map[key] || key, tag: parts[2] || "" };
   }
 

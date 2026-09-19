@@ -29,7 +29,6 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here 
-          - sharkfin-latest.yml
           - sharkfin-bluefin-latest.yml
     steps:
        # the build is fully handled by the reusable github action
