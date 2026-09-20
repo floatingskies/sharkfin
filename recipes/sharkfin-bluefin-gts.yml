@@ -18,3 +18,4 @@ modules:
     include:
       - zz42-sharkfin-bluefin.gschema.override
       - zz999-sharkfin-wallpaper.gschema.override
+  - type: initramfs  # Regenerate initramfs so the plymouth spinner theme + pixmaps changes are baked in
