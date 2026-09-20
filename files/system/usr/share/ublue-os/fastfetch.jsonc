@@ -1,0 +1,146 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "file",
+    "source": "/usr/share/ublue-os/fastfetch/shark.png",
+    "padding": {
+      "left": 1,
+      "right": 2
+    }
+  },
+  "display": {
+    "separator": "  ",
+    "color": {
+      "keys": "38;2;94;188;222"
+    }
+  },
+  "modules": [
+    {
+      "type": "title",
+      "key": "User",
+      "color": {
+        "user": "38;2;94;188;222",
+        "at": "white",
+        "host": "bright_green"
+      }
+    },
+    "break",
+    {
+      "type": "command",
+      "key": "Image",
+      "keyColor": "#5ebede",
+      "text": "/usr/bin/ublue-image-info.sh"
+    },
+    {
+      "type": "os",
+      "key": "OS",
+      "keyColor": "#5ebede",
+      "format": "{pretty-name}"
+    },
+    {
+      "type": "kernel",
+      "key": "Kernel",
+      "keyColor": "#5ebede",
+      "format": "{1} {2}"
+    },
+    {
+      "type": "host",
+      "key": "Machine",
+      "keyColor": "#5ebede"
+    },
+    {
+      "type": "uptime",
+      "key": "Uptime",
+      "keyColor": "#a6da95"
+    },
+    {
+      "type": "packages",
+      "key": "Pkgs",
+      "keyColor": "#f5a97f"
+    },
+    "break",
+    {
+      "type": "cpu",
+      "key": "CPU",
+      "keyColor": "#8aadf4"
+    },
+    {
+      "type": "gpu",
+      "key": "GPU",
+      "keyColor": "#c6a0f6"
+    },
+    {
+      "type": "memory",
+      "key": "Mem",
+      "keyColor": "#f5bde6"
+    },
+    {
+      "type": "disk",
+      "key": "Disk",
+      "keyColor": "#f5a97f",
+      "hideFS": "overlay"
+    },
+    {
+      "type": "localip",
+      "key": "Net",
+      "keyColor": "#a6da95"
+    },
+    "break",
+    {
+      "type": "shell",
+      "key": "Shell",
+      "keyColor": "#94e2d5"
+    },
+    {
+      "type": "terminal",
+      "key": "Term",
+      "keyColor": "#94e2d5"
+    },
+    {
+      "type": "de",
+      "key": "DE",
+      "keyColor": "#20a0f5"
+    },
+    {
+      "type": "wm",
+      "key": "WM",
+      "keyColor": "#20a0f5"
+    },
+    {
+      "type": "display",
+      "key": "Display",
+      "keyColor": "#eed49f"
+    },
+    {
+      "type": "battery",
+      "key": "Battery",
+      "keyColor": "#a6da95"
+    },
+    "break",
+    {
+      "type": "command",
+      "key": "Podman",
+      "keyColor": "#8aadf4",
+      "text": "podman version --format '{{.Client.Version}}'",
+      "format": "v{1}"
+    },
+    {
+      "type": "command",
+      "key": "Containers",
+      "keyColor": "#8aadf4",
+      "text": "podman ps -q | wc -l",
+      "format": "{1} running"
+    },
+    {
+      "type": "command",
+      "key": "Staged",
+      "keyColor": "#eed49f",
+      "text": "bootc status | grep -i -m1 staged || echo 'no staged update'"
+    },
+    "break",
+    {
+      "type": "colors",
+      "paddingLeft": 2
+    }
+  ]
+}

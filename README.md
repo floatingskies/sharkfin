@@ -5,6 +5,7 @@ This is a [Bootable Container](https://containers.github.io/bootable/) image bui
 Modifications common to all images:
 
 -   The funny shark wallpaper is the default background (also available in the background picker)
+-   Bluefin's `uwelcome` MOTD banner is disabled. A `fastfetch` system summary with the funny shark logo is shown instead on login (tuned for dev-ops/sysadmins: OS image, kernel, IP, disk, podman version, running containers, staged bootc update). Turn it off per-user with `touch ~/.config/no-show-user-motd` or `export SHARKFIN_MOTD=0`. `ublue-fastfetch` is still available as `neofetch`/`fastfetch`.
 -   Google Chrome RPM installed and set as default browser (no Brave, no baked flatpaks)
 -   Clocks set to AM/PM view with Weekday Display
 -   Curated selection of Flatpak apps installed automatically at runtime, with everything the Bluefin base already ships deliberately excluded (no duplicated apps)

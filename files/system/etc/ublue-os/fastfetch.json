@@ -1,0 +1,6 @@
+{
+	"fastfetch-config": "/usr/share/ublue-os/fastfetch.jsonc",
+	"shuffle-logo": false,
+	"logo-directory": "/usr/share/ublue-os/fastfetch",
+	"default-theme": "slate"
+}
