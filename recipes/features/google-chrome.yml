@@ -11,6 +11,5 @@ modules:
     install:
       packages:
         - google-chrome-stable
-        - chromium
     optfix:
       - google
