@@ -154,7 +154,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
 
       - name: Publish / Update ISO Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: iso-latest
           name: Sharkfin Live ISO (latest)
